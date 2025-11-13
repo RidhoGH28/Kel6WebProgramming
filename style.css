@@ -1,5 +1,61 @@
 h1 {
-    font-family: 'Courier New', Courier, monospace;
     font-size: larger;
+    font-weight: 900;
     text-align: center;
+    -webkit-text-stroke: 2px;
+    -webkit-text-stroke-color: black;
+    color: #f7f7f7;
+    margin-bottom: 30px;
+    font-size: 1.8em;
+    padding-bottom: 10px;
+}
+header{
+    position: fixed;
+    width: 100%;
+    z-index: 1
+}
+
+table {
+    padding-top: 5vh;
+    background-color: burlywood;
+}
+
+body {
+    font-family: sans-serif; /* Menggunakan font dasar yang bersih */
+    margin: 0;
+    padding-top: 1;
+    background-color: #b89566; /* Warna latar belakang ringan */
+    text-align: center; /* Memastikan semua konten di tengah */
+}
+
+/* Ini memastikan zoom in dan zoom out terjadi secara halus selama 0.3 detik */
+
+table img {
+    /* Wajib: Tambahkan transisi agar perubahan ukuran terjadi secara perlahan */
+    transition: transform 0.3s ease-in-out;
+    
+    /* Tambahkan display: block untuk membantu transisi pada beberapa browser */
+    /*display: block; */
+    
+    /* Untuk struktur table, hapus properti height dan width yang ada di HTML, */
+    /* dan pastikan gambar mengikuti lebar TD-nya. */
+    /*
+    width: 100%;
+    height: auto;*/
+}
+
+/* 2. Terapkan Zoom In saat Mouse Diarahkan (Hover) */
+/* Kita menargetkan gambar saat mouse diarahkan ke TD-nya */
+td:hover img {
+    /* Memperbesar gambar menjadi 110% (1.1) dari ukuran normal */
+    transform: scale(1.1); 
+    
+    /* Optional: Menggeser gambar sedikit ke atas saat di-zoom */
+    /* transform: scale(1.1) translateY(-5px); */
+}
+
+/* 3. Optional: Atur tampilan TD */
+/* Penting untuk mengatur overflow agar gambar yang membesar tidak menabrak gambar di sebelah */
+td {
+    overflow: hidden; /* Menyembunyikan bagian gambar yang keluar dari batas TD saat di-zoom */
 }
