@@ -2,17 +2,20 @@ h1 {
     font-size: larger;
     font-weight: 900;
     text-align: center;
-    -webkit-text-stroke: 2px;
-    -webkit-text-stroke-color: black;
+    text-shadow: 
+        1px 1px 0 #000,
+        -1px -1px 0 #000,
+        1px -1px 0 #000,
+        -1px 1px 0 #000
+        ;
+        
     color: #f7f7f7;
-    margin-bottom: 30px;
     font-size: 1.8em;
-    padding-bottom: 10px;
 }
-header{
+header {
     position: fixed;
     width: 100%;
-    z-index: 1
+    z-index: 1 /* Agar header lebih tinggi ketika animasi gambar aktif */
 }
 
 table {
@@ -58,4 +61,5 @@ td:hover img {
 /* Penting untuk mengatur overflow agar gambar yang membesar tidak menabrak gambar di sebelah */
 td {
     overflow: hidden; /* Menyembunyikan bagian gambar yang keluar dari batas TD saat di-zoom */
+    cursor: pointer; /* Mengubah gaya kursor*/
 }

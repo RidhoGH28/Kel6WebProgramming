@@ -1,0 +1,42 @@
+/* Kasih background color */
+body {
+    background-color: rgb(148, 40, 40);
+}
+
+@keyframes slideUp {
+    from {
+        transform: translateY(165%);
+    } to {
+        transform: translateY(0);
+    }
+}
+
+.desc {
+    display: flex;
+    align-items: center;
+}
+
+section {
+    animation: slideUp 0.5s forwards;
+    animation-timing-function: cubic-bezier(0.075, 0.82, 0.165, 1);
+    background-color: aliceblue; /* Beri background color untuk section */
+    border-radius: 2vw; /* radius bagian pojokan section */
+    width: 80%; /* lebar section */
+    margin: 0 auto; /* bikin section ke tengah halaman */
+    padding: 2vw; /* beri jarak border section dengan elemen yang ada di dalamnya */
+}
+
+img {
+    border-radius: 1vh; /* radius bagian pojokan gambar */
+    /* ukuran gambar */
+}
+
+.container {
+    display: flex; /* buat div di dalam div container tersusun secara horizontal */
+    gap: 2vw; /* jarak antar div dalam container */
+}
+
+p {
+    text-indent: 50px; /* indentasi */
+    font-size: large;
+}
