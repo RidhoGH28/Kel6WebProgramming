@@ -3,6 +3,7 @@ body {
     background-color: rgb(148, 40, 40);
 }
 
+/* Ini buat animasi section naik dari bawah ke atas */
 @keyframes slideUp {
     from {
         transform: translateY(165%);
@@ -11,6 +12,7 @@ body {
     }
 }
 
+/* ini untuk teks tentang profil */
 .desc {
     display: flex;
     align-items: center;
@@ -28,7 +30,8 @@ section {
 
 img {
     border-radius: 1vh; /* radius bagian pojokan gambar */
-    /* ukuran gambar */
+    width: 20vw;/* ukuran gambar */
+    
 }
 
 .container {
@@ -39,4 +42,16 @@ img {
 p {
     text-indent: 50px; /* indentasi */
     font-size: large;
+}
+
+/* Supaya tampilan di mobile lebih baik */
+@media (max-width: 768px) {
+    .container {
+        flex-direction: column;
+    }
+    img {
+        width: 40vw;
+        display: block;
+        margin: 0 auto;
+    }
 }
